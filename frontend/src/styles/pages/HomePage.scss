@@ -1,0 +1,7 @@
+@import "../vars";
+
+.homePage {
+    padding: $bodypadding;
+    display: flex;
+    justify-content: space-between;
+}

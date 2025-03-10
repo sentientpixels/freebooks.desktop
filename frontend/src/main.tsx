@@ -5,16 +5,16 @@ import { createTheme, MantineProvider, MantineColorsTuple } from '@mantine/core'
 
 // mantine
 const themeColors: MantineColorsTuple = [
-    "#e7fdef",
-    "#d6f6e1",
-    "#afebc3",
-    "#84dfa3",
-    "#61d587",
-    "#4acf76",
-    "#3ccc6c",
-    "#2cb45b",
-    "#21a04f",
-    "#0b8b41"
+    "#ecfbf1",
+    "#dcf2e4",
+    "#b8e4c7",
+    "#91d5a8",
+    "#71c98d",
+    "#5cc17c",
+    "#50bd73",
+    "#40a661",
+    "#359455",
+    "#268046"
   ];
   
 const theme = createTheme({
