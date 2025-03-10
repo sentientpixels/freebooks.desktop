@@ -4,8 +4,7 @@ import {Greet} from "../wailsjs/go/main/App";
 import { Route, Switch } from "wouter";
 
 import { useMantineTheme } from '@mantine/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { Settings } from 'lucide-react';
 
 import HomePage from './pages/HomePage';
 import Accounts from './pages/Accounts';
@@ -31,7 +30,7 @@ function App() {
             <div className="header">
                 <img src={whitelogo} className='logo' />
                 <h1 className='title'>FreeBooks</h1>
-                <FontAwesomeIcon icon={faGear} className='settings' />
+                <Settings />
             </div>
 
             <Switch>
