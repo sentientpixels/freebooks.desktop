@@ -1,3 +1,61 @@
 .accountsPage {
     display: flex;
+
+    .searchInput {
+        margin-bottom: 0.8rem;
+    }
+    
+    .accountsTree{
+        margin-top: 0.8rem;
+    }
+
+    .accountsList {
+        height: 70vh;
+    }
+
+    .accountItem {
+        
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .chevronIcon, .emptyIcon, .accountIcon {
+            height: 1.2rem;
+            width: 1.2rem;
+        }
+
+        // .accountIcon{
+        //     height: 1.2rem;
+        //     width: 1.2rem;
+        // }
+
+        .accountLabel {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+    .rightPane {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    // .backButton {
+    //     display: flex;
+    //     align-items: center;
+    //     gap: 0.5rem;
+    // }
+
+    .backIcon {
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-top: -4px;
+        margin-right: 8px;
+    }
+
+
 }

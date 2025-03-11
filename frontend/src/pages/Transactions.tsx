@@ -3,10 +3,11 @@ import { useEffect } from 'react';
 import { useLocation } from "wouter";
 
 interface TransactionsProps {
-    className?: string
+    className?: string,
+    setBarText: (text: string) => void
 }
 
-function Transactions({ className }: TransactionsProps) {
+function Transactions({ className, setBarText }: TransactionsProps) {
 
     const [location, navigate] = useLocation();
 

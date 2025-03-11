@@ -1,4 +1,4 @@
-@import "vars.scss";
+@use "vars";
 
 html, body {
     margin: 0;
@@ -35,7 +35,7 @@ h1 {
         align-items: center;
         gap: 1rem;
 
-        padding: $bodypadding;
+        padding: vars.$bodypadding;
         background: rgb(44, 44, 44);
 
         .logo {
@@ -52,6 +52,7 @@ h1 {
 
         .settings {
             margin-left: auto;
+            height: 1rem;
         }
 
     }
@@ -59,13 +60,19 @@ h1 {
     .main {
         grid-area: main;
         padding-top: 2rem;
+        padding-left: vars.$bodypadding;
+        padding-right: vars.$bodypadding;
+        padding-bottom: 4rem;
     }
 
     .bottomBar {
         grid-area: bottombar;
-        padding: 0.5rem $bodypadding;
+        padding: 0.5rem vars.$bodypadding;
         font-size: 0.8rem;
         background: black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 
     .leftPane {
