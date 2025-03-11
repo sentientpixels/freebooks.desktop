@@ -31,6 +31,7 @@ function Accounts({ className, setBarText }: AccountsProps) {
     const theme = useMantineTheme();
     const [addAccountModalOpened, { open: openAddAccountModal, close: closeAddAccountModal }] = useDisclosure(false);
     const modalOpen = useRef(false);
+    const closedModal = useRef(false);
 
     const focusSearchBar = (event?: KeyboardEvent) => {
         event?.preventDefault(); // Prevent default key press behavior
@@ -39,10 +40,23 @@ function Accounts({ className, setBarText }: AccountsProps) {
     };
 
     const goBack = () => {
-        if (modalOpen.current) {
-            modalOpen.current = false;
+        if (addAccountModalOpened){
             return;
         }
+
+        if (modalOpen.current) {
+            return;
+        }
+
+        // when esc is pressed in the modal, it's onclose is called befoe this goBack()
+        // :. modalOpen.current always evaluates to false
+        // closedModal is a ref that is like a flag to check if the esc keypress was for the modal; it simply returns, 
+        // and marks the flag false, so that the next esc event is processed for navigation
+        if (closedModal.current) {
+            closedModal.current = false;
+            return;
+        }
+        
         navigate("/");
     }
 
@@ -59,6 +73,12 @@ function Accounts({ className, setBarText }: AccountsProps) {
         openAddAccountModal();
     }
 
+    const closeModal = () => {
+        modalOpen.current = false;
+        closedModal.current = true;
+        closeAddAccountModal();
+    }
+
     useEffect(() => {
         const handleKeyboardEvents = (event: KeyboardEvent) => {
 
@@ -66,6 +86,10 @@ function Accounts({ className, setBarText }: AccountsProps) {
                 if (event.key === "Escape") {
                     inputRef.current?.blur();
                 }
+                return;
+            }
+
+            if (modalOpen.current) {
                 return;
             }
 
@@ -95,6 +119,10 @@ function Accounts({ className, setBarText }: AccountsProps) {
 
     return (
         <>
+            <AddAccountModal
+                opened={addAccountModalOpened}
+                onClose={closeModal}
+            />
             <div className={className + " accountsPage"}>
                 <div className="leftPane">
                     <TextInput
@@ -134,35 +162,30 @@ function Accounts({ className, setBarText }: AccountsProps) {
                 <div className="rightPane">
                     <Button
                         fullWidth
-                        color={theme.colors.themeColors[8]}
                         onClick={() => focusSearchBar()}
                     >
                         Find
                     </Button>
                     <Button
                         fullWidth
-                        color={theme.colors.themeColors[8]}
                         onClick={() => expandAll()}
                     >
                         Expand
                     </Button>
                     <Button
                         fullWidth
-                        color={theme.colors.themeColors[8]}
                         onClick={() => collapseAll()}
                     >
                         Collapse
                     </Button>
                     <Button
                         fullWidth
-                        color={theme.colors.themeColors[8]}
                         onClick={() => addAccount()}
                     >
                         Add Account
                     </Button>
                     <Button
                         fullWidth
-                        color={theme.colors.themeColors[8]}
                         className='backButton'
                         onClick={() => goBack()}
                     >
@@ -170,10 +193,6 @@ function Accounts({ className, setBarText }: AccountsProps) {
                     </Button>
                 </div>
             </div>
-            <AddAccountModal
-                opened={addAccountModalOpened}
-                onClose={closeAddAccountModal}
-            />
         </>
     )
 }

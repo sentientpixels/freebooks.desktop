@@ -47,7 +47,6 @@ function HomeButtons({ className }: HomeButtonsProps) {
         >
             <Button 
                 fullWidth 
-                color={theme.colors.themeColors[8]}
                 onClick={handleAccountsClick}
             >
                 Accounts
@@ -55,7 +54,6 @@ function HomeButtons({ className }: HomeButtonsProps) {
 
             <Button 
                 fullWidth 
-                color={theme.colors.themeColors[8]}
                 onClick={handleTransactionsClick}
             >
                 Transactions

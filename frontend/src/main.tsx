@@ -20,7 +20,9 @@ const themeColors: MantineColorsTuple = [
 const theme = createTheme({
     colors: {
         themeColors,
-    }
+    },
+    primaryColor: "themeColors",
+
 });
 
 // react stuff

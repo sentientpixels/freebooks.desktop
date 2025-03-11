@@ -85,3 +85,23 @@ export const fakeAccounts: TreeNodeData[] = [
         ]
     }
 ]
+
+
+
+export const parentAccounts = [
+    "Assets",
+    "Bank [Assets]",
+    "Cash [Assets]",
+    "Debt [Liabilities]",
+    "Loan [Liabilities]",
+    "Credit Card [Liabilities]",
+    "Equity [Equity]",
+    "Opening Balance [Equity]",
+    "Salary [Income]",
+    "Job 1 [Income/Salary]",
+    "Job 2 [Income/Salary]",
+    "Job 3 [Income/Salary]",
+    "Job 4 [Income/Salary]",
+    "Job 5 [Income/Salary]",
+    "Job 6 [Income/Salary]",
+]
