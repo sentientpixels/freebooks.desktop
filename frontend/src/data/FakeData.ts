@@ -86,7 +86,146 @@ export const fakeAccounts: TreeNodeData[] = [
     }
 ]
 
-
+export const fakeTransactions = [
+    {
+        id: 1,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -1000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 1000,
+                unit: "$"
+            }
+        ]
+    },
+    {
+        id: 2,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -2000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 2000,
+                unit: "$"
+            }
+        ]
+    },
+    {
+        id: 1,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -1000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 1000,
+                unit: "$"
+            }
+        ]
+    },
+    {
+        id: 2,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -2000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 2000,
+                unit: "$"
+            }
+        ]
+    },
+    {
+        id: 1,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -1000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 1000,
+                unit: "$"
+            }
+        ]
+    },
+    {
+        id: 2,
+        date: "2023-03-01",
+        note: "Recieved Salary",
+        entries: [
+            {
+                account: {
+                    id: 1,
+                    name: "Salary"
+                },
+                amount: -2000,
+                unit: "$"
+            },
+            {
+                account: {
+                    id: 2,
+                    name: "Bank"
+                },
+                amount: 2000,
+                unit: "$"
+            }
+        ]
+    }
+]
 
 export const parentAccounts = [
     "Assets",

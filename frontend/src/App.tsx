@@ -11,6 +11,7 @@ import Accounts from './pages/Accounts';
 import Transactions from './pages/Transactions';
 
 import './styles/App.scss'
+import '@mantine/dates/styles.css';
 import whitelogo from './assets/white_logo.svg'
 
 
