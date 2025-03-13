@@ -244,3 +244,18 @@ export const parentAccounts = [
     "Job 5 [Income/Salary]",
     "Job 6 [Income/Salary]",
 ]
+
+export const filterSets = [
+    {
+        "name": "Everything"
+    },
+    {
+        "name": "Last Week"
+    },
+    {
+        "name": "Last Month"
+    },
+    {
+        "name": "Last Year"
+    }
+]
