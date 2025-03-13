@@ -35,7 +35,7 @@ export default function AccountComboBox({ onItemSelected }: AccountComboBoxProps
         >
             <Combobox.Target>
                 <TextInput
-                    placeholder="Pick or type to search"
+                    placeholder="Account..."
                     value={parentAccountValue}
                     onChange={(event) => {
                         setParentAccountValue(event.currentTarget.value);

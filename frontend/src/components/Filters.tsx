@@ -1,7 +1,8 @@
-import { Divider, Group, SegmentedControl, Stack, TextInput } from "@mantine/core"
+import { Divider, Fieldset, Group, SegmentedControl, Stack, TextInput } from "@mantine/core"
 import { DateInput } from '@mantine/dates';
 import { useState } from "react";
 import AccountComboBox from "./AccountComboBox";
+import { FilterByAccount } from "./FilterByAccount";
 
 interface FiltersProps {
     className?: string
@@ -18,6 +19,10 @@ export default function Filters({ className }: FiltersProps) {
         <Stack 
             className={className + " filters"}
             align="flex-start"
+            justify="flex-start"
+            style={{
+                flex: 1
+            }}
         >
             <SegmentedControl
                 value={rangetype}
@@ -62,48 +67,10 @@ export default function Filters({ className }: FiltersProps) {
                 
             }
 
-            <Divider
-                my="md"
-                color="#4a4a4a"
-            />
 
-
-            <Group>
-                <AccountComboBox onItemSelected={() => {}} />
-                <TextInput
-                    placeholder=">"
-                />
-                <TextInput
-                    placeholder="Amount"
-                />
-                <TextInput
-                    placeholder="Currency"
-                />
-            </Group>
-            <Group>
-                <AccountComboBox onItemSelected={() => {}} />
-                <TextInput
-                    placeholder=">"
-                />
-                <TextInput
-                    placeholder="Amount"
-                />
-                <TextInput
-                    placeholder="Currency"
-                />
-            </Group>
-            <Group>
-                <AccountComboBox onItemSelected={() => {}} />
-                <TextInput
-                    placeholder=">"
-                />
-                <TextInput
-                    placeholder="Amount"
-                />
-                <TextInput
-                    placeholder="Currency"
-                />
-            </Group>
+            <FilterByAccount />
+            <FilterByAccount />
+            <FilterByAccount />
 
 
         </Stack>

@@ -20,18 +20,15 @@ export default function TransactionsList({ className }: TransactionsListProps) {
     })
 
     return (
-        <div className={className + " transactionsList"}>
-            <Stack
-                gap="1rem"
-                style={{
-                    marginTop: "1rem",
-                    width: "50%"
-                }}
-            >
-                {
-                    transactions
-                }
-            </Stack>
-        </div>
+        <Stack
+            gap="1rem"
+            style={{
+                flex: 3
+            }}
+        >
+            {
+                transactions
+            }
+        </Stack>
     )
 }

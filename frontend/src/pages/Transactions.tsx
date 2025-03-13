@@ -33,32 +33,16 @@ function Transactions({ className, setBarText }: TransactionsProps) {
     }, [navigate]);
 
     return (
-        <div 
-            className={className}
+        <Group 
+            className={className + " transactionsPage"}
+            align='flex-start'
             style={{
-                position: "relative"
+                width: "100%",
             }}
         >
-            <Group
-                pos="sticky"
-            >
-                <Button
-                    variant='outline'
-                    onClick={toggleFilters}
-                    className='filterButton'
-                >
-                    <ChevronRight className='filterIcon' /> 
-                    <Text className='filterText'>Filters</Text>
-                </Button>
-                <Text c="dimmed">No filters applied.</Text>
-            </Group>
-            <Collapse
-                in={filtersOpened}
-            >
-                <Filters className="filtersSection" />
-            </Collapse>
             <TransactionsList />
-        </div>
+            <Filters />
+        </Group>
     )
 }
 
